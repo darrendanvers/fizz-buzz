@@ -1,0 +1,76 @@
+plugins {
+    id 'java'
+    id 'checkstyle'
+    id "com.github.spotbugs" version "3.0.0"
+    id 'pmd'
+}
+
+group 'com.dd'
+version '1.0.0'
+
+sourceCompatibility = 1.11
+
+jar {
+    manifest {
+        attributes 'Implementation-Title': 'FizzBuzz',
+                'Main-Class': 'com.dd.FizzBuzzApplication'
+    }
+    from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile group: 'ch.qos.logback', name: 'logback-classic', version: '1.2.3'
+}
+
+// Configure Chechstyle.
+checkstyle {
+    toolVersion = '8.12'
+    sourceSets = [sourceSets.main]
+    ignoreFailures = false
+}
+
+tasks.withType(Checkstyle) {
+    reports {
+        xml.enabled false
+        html.enabled true
+        html.destination rootProject.file("build/reports/checkstyle/checkstyle.html")
+    }
+}
+
+// Configure Spotbugs.
+spotbugs {
+    ignoreFailures = false
+}
+
+spotbugsMain {
+    reports {
+        xml.enabled = false
+        html.configure {
+            enabled = true
+            stylesheet = 'fancy-hist.xsl'
+        }
+    }
+}
+
+spotbugsTest {
+    reports {
+        xml.enabled = false
+        html.configure {
+            enabled = true
+            stylesheet = 'fancy-hist.xsl'
+        }
+    }
+}
+
+// Configure PMD.
+pmd {
+    toolVersion = "6.8.0"
+    ruleSetFiles = files("config/pmd/pmd.xml")
+    ruleSets = []
+    sourceSets = [sourceSets.main]
+}

@@ -1,0 +1,14 @@
+#
+# Ignore the files grade pulls
+#
+.gradle/
+
+#
+# Ignore built files
+#
+build/
+
+#
+# Ignore IntelliJ files.
+#
+.idea/
