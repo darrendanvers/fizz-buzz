@@ -13,7 +13,7 @@ sourceCompatibility = 1.11
 jar {
     manifest {
         attributes 'Implementation-Title': 'FizzBuzz',
-                'Main-Class': 'com.dd.FizzBuzzApplication'
+                'Main-Class': 'dev.codestijl.FizzBuzzApplication'
     }
     from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
 }
