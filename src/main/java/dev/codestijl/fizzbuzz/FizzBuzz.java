@@ -1,4 +1,4 @@
-package com.dd.fizzbuzz;
+package dev.codestijl.fizzbuzz;
 
 /**
  * Base class for objects that return a FizzBuzz value.

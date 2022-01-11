@@ -1,4 +1,4 @@
-package com.dd;
+package dev.codestijl;
 
 import java.util.Objects;
 import java.util.function.Consumer;

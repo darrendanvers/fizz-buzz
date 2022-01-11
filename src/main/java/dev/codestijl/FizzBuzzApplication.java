@@ -1,6 +1,7 @@
-package com.dd;
+package dev.codestijl;
 
-import com.dd.fizzbuzz.FizzBuzzRunner;
+import dev.codestijl.fizzbuzz.FizzBuzzRunner;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

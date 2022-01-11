@@ -1,4 +1,4 @@
-package com.dd.fizzbuzz;
+package dev.codestijl.fizzbuzz;
 
 /**
  * Handles instances where a number should be printed.

@@ -1,4 +1,4 @@
-package com.dd;
+package dev.codestijl;
 
 import org.junit.Assert;
 import org.junit.Test;

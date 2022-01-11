@@ -1,4 +1,4 @@
-package com.dd.fizzbuzz;
+package dev.codestijl.fizzbuzz;
 
 import org.junit.Assert;
 import org.junit.Test;

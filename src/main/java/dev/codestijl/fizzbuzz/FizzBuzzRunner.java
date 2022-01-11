@@ -1,4 +1,4 @@
-package com.dd.fizzbuzz;
+package dev.codestijl.fizzbuzz;
 
 import java.util.stream.LongStream;
 import java.util.stream.Stream;

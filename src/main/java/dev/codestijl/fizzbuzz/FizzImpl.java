@@ -1,4 +1,4 @@
-package com.dd.fizzbuzz;
+package dev.codestijl.fizzbuzz;
 
 /**
  * Handles instances where "Fizz" should be printed.

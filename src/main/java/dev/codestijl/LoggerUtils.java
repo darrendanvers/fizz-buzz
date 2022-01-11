@@ -1,4 +1,4 @@
-package com.dd;
+package dev.codestijl;
 
 import ch.qos.logback.classic.Level;
 import org.slf4j.LoggerFactory;
